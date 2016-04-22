@@ -1,0 +1,9 @@
+// output: searchResults.html
+dl(ng-repeat="result in results")
+    dt 
+        span.result-kind {{ result.kind }} 
+        span.track-name Track name: {{ result.trackName }}
+        span.artist-name Artist name: {{ result.artistName }}
+    dd 
+        img(ng-src="{{ result.artworkUrl60 }}")
+        p Release date: {{ result.releaseDate | date }}

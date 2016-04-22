@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "searchresults.js",
+  "sourceRoot": "",
+  "sources": [
+    "..\\..\\coffee\\directives\\searchresults.coffee"
+  ],
+  "names": [],
+  "mappings": "AAEA,GAAG,CAAC,SAAJ,CAAc,eAAd,EAA+B,SAAA;SAC3B;IACI,WAAA,EAAa,+BADjB;;AAD2B,CAA/B"
+}

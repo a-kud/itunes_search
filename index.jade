@@ -1,0 +1,23 @@
+// output: index.html
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Search Itunes
+        link(rel="stylesheet" href="css/main.css")
+        script(src="bower_components/angular/angular.min.js")
+    body(ng-app="itunesSearch" ng-controller="searchCtrl")
+        form#search-from
+            label(for="searchbar" form="search-from") Hey. Go ahead and search Itunes, champ.
+            input#searchbar(type="search" form="search-from" ng-model="searchTerm")
+            input(type="checkbox" name="music")
+            | Music
+            input(type="checkbox" name="tvshow")
+            | tvShow
+            input#search-submit(type="submit" value="Search" ng-click="doSearch()")
+        div( search-results )
+        script(src="js/app.js")
+        script(src="js/services/itunesData.js")
+        script(src="js/controllers/searchCtrl.js")
+        script(src="js/directives/searchresults.js")

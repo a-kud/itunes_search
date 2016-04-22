@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "getJSON.js",
+  "sourceRoot": "",
+  "sources": [
+    "..\\..\\coffee\\services\\getJSON.coffee"
+  ],
+  "names": [],
+  "mappings": "AAEA,GAAG,CAAC,OAAJ,CAAY,YAAZ,EAA0B,SAAC,KAAD;SAEtB,IAAI,CAAC,OAAL,GAAe,SAAC,GAAD;WACX,KAAK,CAAC,KAAN,CAAY,GAAZ,CACA,CAAC,OADD,CACS,SAAC,IAAD;aACL,OAAO,CAAC,GAAR,CAAY,IAAZ;IADK,CADT;EADW;AAFO,CAA1B"
+}
