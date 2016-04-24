@@ -1,9 +1,10 @@
 // output: searchResults.html
-dl(ng-repeat="result in results")
+dl(class="{{ result.kind | lowercase }}" ng-repeat="result in results")
     dt 
         span.result-kind {{ result.kind }} 
-        span.track-name Track name: {{ result.trackName }}
+        a.track-name(href="{{ result.collectionViewUrl }}" target="_blank") {{ result.trackName }}
         span.artist-name Artist name: {{ result.artistName }}
     dd 
         img(ng-src="{{ result.artworkUrl60 }}")
-        p Release date: {{ result.releaseDate | date }}
+        span Release date: {{ result.releaseDate | date }}
+        p {{ result.shortDescription }}

@@ -1,0 +1,9 @@
+// output: searchForm.html
+form#search-from
+    label(for="searchbar" form="search-from") Go ahead and search Itunes.
+    input#searchbar(type="search" form="search-from" ng-model="searchTerm")
+    input(type="checkbox" name="music")
+    | Music
+    input(type="checkbox" name="tvshow")
+    | tvShow            
+    input#search-submit(type="submit" value="Search" ng-click="doSearch()")

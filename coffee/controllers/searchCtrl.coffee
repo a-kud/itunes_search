@@ -1,8 +1,7 @@
 # out: ../../js/controllers/$1.js, bare: true, sourcemap: true
 
-app.controller("searchCtrl", ($scope, $http, itunesData) ->
+app.controller("searchCtrl", ["$scope", "$http", "itunesData", ($scope, $http, itunesData) ->
 
-        $scope.searchTerm = ""
         $scope.results = []
         $scope.doSearch = () ->
             itunesData.getData($scope.searchTerm).then (data) ->
@@ -11,5 +10,5 @@ app.controller("searchCtrl", ($scope, $http, itunesData) ->
                     $scope.results = results.results
                     console.log($scope.results)
                 else
-                    console.error('404. Not found')
-)
+                    console.error("404. Not found")
+])

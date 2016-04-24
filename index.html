@@ -6,16 +6,12 @@
     <title>Search Itunes</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
   </head>
   <body ng-app="itunesSearch" ng-controller="searchCtrl">
-    <form id="search-from">
-      <label for="searchbar" form="search-from">Hey. Go ahead and search Itunes, champ.</label>
-      <input id="searchbar" type="search" form="search-from" ng-model="searchTerm">
-      <input type="checkbox" name="music">Music
-      <input type="checkbox" name="tvshow">tvShow
-      <input id="search-submit" type="submit" value="Search" ng-click="doSearch()">
-    </form>
+    <div ng-view></div>
     <div search-results></div>
+    <pre>{{ results | json }}</pre>
     <script src="js/app.js"></script>
     <script src="js/services/itunesData.js"></script>
     <script src="js/controllers/searchCtrl.js"></script>

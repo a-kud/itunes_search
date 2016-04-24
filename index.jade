@@ -7,16 +7,20 @@ html
         title Search Itunes
         link(rel="stylesheet" href="css/main.css")
         script(src="bower_components/angular/angular.min.js")
+        script(src="bower_components/angular-route/angular-route.js")
     body(ng-app="itunesSearch" ng-controller="searchCtrl")
-        form#search-from
-            label(for="searchbar" form="search-from") Hey. Go ahead and search Itunes, champ.
-            input#searchbar(type="search" form="search-from" ng-model="searchTerm")
-            input(type="checkbox" name="music")
-            | Music
-            input(type="checkbox" name="tvshow")
-            | tvShow
-            input#search-submit(type="submit" value="Search" ng-click="doSearch()")
+        //- div(ng-include="'html/searchForm.html'")
+        //- form#search-from
+        //-     label(for="searchbar" form="search-from") Go ahead and search Itunes.
+        //-     input#searchbar(type="search" form="search-from" ng-model="searchTerm")
+        //-     input(type="checkbox" name="music" value="music")
+        //-     | Music
+        //-     input(type="checkbox" name="tvshow" value="tvshow")
+        //-     | tvShow            
+        //-     input#search-submit(type="submit" value="Search" ng-click="doSearch()")
+        div(ng-view)
         div( search-results )
+        pre {{ results | json }}
         script(src="js/app.js")
         script(src="js/services/itunesData.js")
         script(src="js/controllers/searchCtrl.js")
